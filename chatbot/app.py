@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
-import nltk
-nltk.download('wordnet')
+
 
 #Flask initialisation
 app = Flask(__name__)
