@@ -7,9 +7,9 @@ app = Flask(__name__)
 # Create a new instance of a ChatBot
 bot = ChatBot(
     'helpbot',
-    storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    # database= mongodb_name,
-    # database_uri= mongodb_uri,
+    storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
+    database= mongodb_name,
+    database_uri= mongodb_uri,
     logic_adapters=[
         {
             'import_path': 'chatterbot.logic.BestMatch',
